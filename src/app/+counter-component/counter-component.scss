@@ -1,0 +1,11 @@
+input {
+  &.fizz {
+    color: yellow;
+  }
+  &.buzz {
+    color: blue;
+  }
+  &.fizzbuzz {
+    color: green;
+  }
+}

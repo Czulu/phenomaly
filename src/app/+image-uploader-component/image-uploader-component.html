@@ -1,0 +1,17 @@
+<div class="col-lg-6 col-sm-6 col-12">
+  <h4>Image Uploader</h4>
+  <div class="input-group">
+    <input type="text" class="form-control" readonly [ngModel]="fileName">
+    <label
+      (change)="inputListener($event)"
+      class="input-group-btn">
+                    <span class="btn btn-info">
+                        <span class="glyphicon glyphicon-folder-open"></span> Select a File <input type="file" style="display: none;" multiple>
+                    </span>
+    </label>
+  </div>
+  <p>Size: {{fileSize | fileSize }}</p>
+  <p>Type: {{fileType}}</p>
+  <p *ngIf="height && width">Dimensions: {{width}}px x {{height}}px</p>
+  <img *ngIf="url" (error)="onPreviewError($event)" (load)="onPreviewLoaded($event)" #imagePreview [src]="url" alt="Image preview...">
+</div>
