@@ -13,5 +13,5 @@
   <p>Size: {{fileSize | fileSize }}</p>
   <p>Type: {{fileType}}</p>
   <p *ngIf="height && width">Dimensions: {{width}}px x {{height}}px</p>
-  <img *ngIf="url" (error)="onPreviewError($event)" (load)="onPreviewLoaded($event)" #imagePreview [src]="url" alt="Image preview...">
+  <img *ngIf="url" (error)="onPreviewError($event)" (load)="onPreviewLoaded($event)" [src]="url" alt="Image preview...">
 </div>
